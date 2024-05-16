@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --font-raleway: "Raleway", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-allura: "Allura", cursive;
+  --font-vibes: "Great Vibes", cursive;
+  --font-rubik: "Rubik", sans-serif;
+  --container-width-lg: 80%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+body {
+  font-family: var(--font-montserrat);
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+/*======================= GENERAL STYLES =======================*/
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}
+.text-font-raleway {
+  font-family: var(--font-raleway);
+}
+.text-font-montserrat {
+  font-family: var(--font-montserrat);
+}
+.text-font-allura {
+  font-family: var(--font-allura);
+}
+.text-font-vibes {
+  font-family: var(--font-vibes);
+}
+.text-font-rubik {
+  font-family: var(--font-rubik);
+}
+
+.background_texture {
+}
+@layer utilities {
+  .blue-gradient_text {
+    @apply bg-gradient-to-r from-[#0240a4] to-[#0575e6] bg-clip-text text-transparent;
+  }
+  .pink-gradient_text {
+    @apply bg-gradient-to-r from-[#600047] to-[#ca1430] bg-clip-text text-transparent;
+  }
+}
+/*======================= MEDIA QUERIES (MEDIUM DEVICES) =======================*/
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+}
+
+/*======================= MEDIA QUERIES (SMALL DEVICES) =======================*/
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--container-width-sm);
+  }
+  body {
+    font-size: 11px;
+  }
+}
